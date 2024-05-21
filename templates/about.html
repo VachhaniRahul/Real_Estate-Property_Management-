@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %} About {% endblock title %}
+
+{% block head %}
+
+<link rel="stylesheet" href="static/css/about.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+{% endblock head %}
+
+{% block body %}
+
+
+
+
+    <!-- <div class="w3-container">
+      <h2>Slideshow Indicators</h2>
+      <p>
+        An example of using buttons to indicate how many slides there are in the
+        slideshow, and which slide the user is currently viewing.
+      </p>
+    </div> -->
+
+    <div class="w3-content w3-display-container" style="max-width: 800px">
+      <!-- <img class="mySlides" src="media/logo.png" style="width: 100%" /> -->
+      <div class="mySlides">
+        <h1>
+          About PropertyPulse.com
+        </h1>
+        <p>
+          Welcome to PropertyPulse.com, your trusted partner in real estate excellence. Established with a passion for delivering unparalleled service, we take pride in being at the forefront of the real estate industry.
+        </p>
+        <h1>
+          Our Mission
+        </h1>
+        <p>
+          At PropertyPulse, our mission is simple yet profound - to redefine the real estate experience. We strive to go beyond the transaction, aiming to build lasting relationships with our clients based on trust, integrity, and exceptional service.
+        </p>
+      </div>
+      <div class="mySlides">
+        <h1>
+          Who We Are
+        </h1>
+        <h1>
+          Visionaries in Real Estate
+        </h1>
+        <p>
+          Led by a team of visionaries, PropertyPulse is committed to shaping the future of real estate. Our forward-thinking approach, coupled with industry expertise, allows us to navigate the dynamic real estate landscape and provide innovative solutions to our clients.
+        </p>
+
+        <h1>
+          Experienced Professionals
+        </h1>
+        <p>
+          Our team of seasoned real estate professionals brings a wealth of experience to the table. With a deep understanding of market trends, negotiation strategies, and a keen eye for opportunities, we are dedicated to helping you achieve your real estate goals.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <h1>
+          Our Values
+        </h1>
+        <h1>
+          Integrity
+        </h1>
+        <p>
+          We believe in doing business with the utmost integrity. Honesty, transparency, and ethical conduct are the cornerstones of our values. You can trust us to always act in your best interests.
+        </p>
+
+        <h1>
+          Excellence
+        </h1>
+        <p>
+          Excellence is not just a goal; it's our standard. From the properties we represent to the services we provide, we are committed to delivering excellence in every aspect of our business.
+        </p>
+
+        <h1>
+          Connect with Us
+        </h1>
+        <p>
+          Thank you for considering PropertyPulse for your real estate needs. We look forward to the opportunity to serve you. Connect with us today, and let's embark on this exciting real estate journey together.
+        </p>
+      </div>
+      <!-- <img class="mySlides" src="css/signup_background.jpg" style="width: 100%" /> -->
+      <!-- <img class="mySlides" src="css/signup_background.jpg" style="width: 100%" /> -->
+      <div
+        class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+        style="width: 100%"
+      >
+        <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">
+          &#10094;
+        </div>
+        <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">
+          &#10095;
+        </div>
+        <span
+          class="w3-badge demo w3-border w3-transparent w3-hover-white"
+          onclick="currentDiv(1)"
+        ></span>
+        <span
+          class="w3-badge demo w3-border w3-transparent w3-hover-white"
+          onclick="currentDiv(2)"
+        ></span>
+        <span
+          class="w3-badge demo w3-border w3-transparent w3-hover-white"
+          onclick="currentDiv(3)"
+        ></span>
+      </div>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-white";
+      }
+    </script>
+
+{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,365 @@
+{% extends "base.html" %}
+
+{% block title %} login {% endblock title %}
+
+{% block head %}
+
+{% comment %} <link rel="stylesheet" href="static/css/login.css" /> {% endcomment %}
+
+
+{% endblock head %}
+
+{% block body %}
+
+
+
+<div>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+        <button
+          class="navbar-toggler"
+          id="profile-navigation"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Dark offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <button
+                  class="btn p-0"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <a class="nav-link" href="about.html">About</a>
+                </button>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-disabled="true"
+                  href="contact_us.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-disabled="true" href="profile.html"
+                  >Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-disabled="true" href="login.html"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-disabled="true"
+                  href="upload_site.html"
+                  >Upload Property</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="mt-5 gradient-custom-2">
+    <section class="gradient-custom-2" style="background-color: #eee">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card mb-4 profile-container">
+              <div class="card-body text-center">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                  alt="avatar"
+                  class="rounded-circle img-fluid"
+                  style="width: 150px"
+                />
+                <h5 class="my-3">John Smith</h5>
+                <p class="text-muted mb-1">Full Stack Developer</p>
+                <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+                <div class="d-flex justify-content-center mb-2">
+                  <button type="button" class="btn btn-primary">
+                    Follow
+                  </button>
+                  <button type="button" class="btn btn-outline-primary ms-1">
+                    Message
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-4 mb-lg-0 profile-container">
+              <h5>Click The Below Button To add more Projects or Property</h5>
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-primary mx-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Follow
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <form action="">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                          Upload
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="">
+                          <label for="">
+                            Write a mobile number to reach you for uploading your property ditails:
+                          </label>
+                          <input type="tel" name="number_for_upload_product">
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <input class="btn btn-primary" type="submit" value="Submit" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="card mb-4 profile-container">
+              <div
+                id="carouselExampleControlsNoTouching"
+                class="carousel slide"
+                data-bs-touch="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="media/Radhe Atlantis/brochure 04_page-0001.jpg"
+                      height="500vw"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="media/An Imperia Vista/abcd_page-0001.jpg"
+                      height="500vw"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="media/Radhe Greens/abc_page-0001.jpg"
+                      height="500vw"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleControlsNoTouching"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleControlsNoTouching"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div>
+              <div class="profile-container">
+                <div class="p-2 card mb-4 mb-md-0">
+                  <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img
+                          src="media/An Imperia Vista/abcd_page-0001.jpg"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a longer card with supporting text below
+                            as a natural lead-in to additional content. This
+                            content is a little bit longer.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img
+                          src="media/Radhe Atlantis/brochure 04_page-0001.jpg"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a short card.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img
+                          src="media/Radhe Greens/abc_page-0001.jpg"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a longer card with supporting text below
+                            as a natural lead-in to additional content.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img
+                          src="media/Radhe Parijat/1183408340-Radhe Parijat_page-0001.jpg"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a longer card with supporting text below
+                            as a natural lead-in to additional content. This
+                            content is a little bit longer.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img
+                          src="media/Radhe Parisar/abcde_page-0001.jpg"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a longer card with supporting text below
+                            as a natural lead-in to additional content. This
+                            content is a little bit longer.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img
+                          src="media/Radhe Atlantis/brochure 04_page-0002.jpg"
+                          class="card-img-top"
+                          alt="..."
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a longer card with supporting text below
+                            as a natural lead-in to additional content. This
+                            content is a little bit longer.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+{% endblock body %}
+

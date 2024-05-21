@@ -1,0 +1,153 @@
+{% extends "base.html" %} 
+
+{% block title %} Contact Us {% endblock title %} 
+
+{% block head %}
+
+{% comment %} <link rel="stylesheet" href="static/css/contact_us.css" /> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="static/css/utility.css" /> {% endcomment %}
+
+<style>
+
+  /* .contactus-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 90vh;
+    min-height: 90vh;
+  } */
+
+  .contactus-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* .video-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  } */
+
+  .contact-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    border-radius: 50px;
+    background-color: rgba(89, 211, 41, 0.849);
+    box-shadow: 100px 15px 20px rgba(0, 0, 0, 0.719);
+}
+
+  .inquiry_image {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    height: 20vh;
+    width: 40vh;
+    box-shadow: 100px 15px 20px rgba(0, 0, 0, 0.719);
+  }
+</style>
+
+{% endblock head %} 
+
+{% block body %}
+
+<div class="contactus-bg">
+
+  <!-- <video  src = "/static/media1/Background Video/background image1.mp4" autoplay muted loop></video> -->
+
+  
+<div>
+  <div>
+    <div>
+      <video autoplay muted loop class="contactus-bg">
+        <source src="/static/media1/Background Video/background image1.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </div>
+</div>
+
+  
+
+<div class="border mx-auto mt-5 p-5 contact-form">
+    <form action="/inquiry/{{inquiry_property.id}}" method="post">
+      {% csrf_token %}
+      <h1>Hi this is Inquiry Page.</h1>
+      <h3>Call Here: 9934******</h3>
+      <h3>Or fill below inquiry form we will contact to you soon.👇</h3>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Your Name</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          name="inquiry_name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          name="email_address"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Phone Number</label
+        >
+        <input
+          type="tel"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Phone Number"
+          name="phone"
+        />
+      </div>
+
+      <div>
+        <label for="exampleFormControlInput1" class="form-label"
+          >Selected Property: </label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Phone Number"
+          name="property_name"
+          value="{{inquiry_property.property_name}}"
+        />
+        <input
+          type="text"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Phone Number"
+          name="property_id"
+          value="{{inquiry_property.id}}"
+          hidden
+        />
+      </div>
+
+      <div>
+        <img class="inquiry_image" src="/media/{{inquiry_property.image}}" alt="">
+      </div>
+      
+      
+      <input class="btn btn-primary" type="submit" value="Submit" />
+    </form>
+  </div>
+
+
+</div>
+
+{% endblock body %}

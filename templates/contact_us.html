@@ -1,0 +1,128 @@
+{% extends "base.html" %} 
+
+{% block title %} Contact Us {% endblock title %} 
+
+{% block head %}
+
+{% comment %} <link rel="stylesheet" href="static/css/contact_us.css" /> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="static/css/utility.css" /> {% endcomment %}
+
+<style>
+
+  /* .contactus-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 90vh;
+    min-height: 90vh;
+  } */
+
+  .contactus-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* .video-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  } */
+
+  .contact-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    border-radius: 50px;
+    background-color: rgba(89, 211, 41, 0.849);
+    box-shadow: 100px 15px 20px rgba(0, 0, 0, 0.719);
+}
+</style>
+
+{% endblock head %} 
+
+{% block body %}
+
+<div class="contactus-bg">
+
+  <!-- <video  src = "/static/media1/Background Video/background image1.mp4" autoplay muted loop></video> -->
+
+  
+<div>
+  <div>
+    <div>
+      <video autoplay muted loop class="contactus-bg">
+        <source src="/static/media1/Background Video/background image1.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </div>
+</div>
+
+  
+
+<div class="border mx-auto mt-5 p-5 contact-form">
+    <form action="/contact_us" method="post">
+      {% csrf_token %}
+      <h1>Hi this is Contact Us Page.</h1>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          name="email_address"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Phone Number</label
+        >
+        <input
+          type="tel"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Phone Number"
+          name="phone"
+        />
+      </div>
+      <div>
+        <label for="exampleFormControlInput1" class="form-label"
+          >Are You Contact as a Buyer Or Seller</label
+        >
+        <select
+          class="form-select form-select-sm"
+          aria-label="Small select example"
+          name="interact_as"
+        >
+          <option selected>Select...</option>
+          <option value="Buyer">Buyer</option>
+          <option value="Seller">Seller</option>
+        </select>
+      </div>
+      <div class="mt-2 mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Example textarea</label
+        >
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="6"
+          placeholder="Write Here..."
+          name="message"
+        ></textarea>
+      </div>
+      <input class="btn btn-primary" type="submit" value="Submit" />
+    </form>
+  </div>
+
+
+</div>
+
+{% endblock body %}

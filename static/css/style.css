@@ -1,0 +1,12 @@
+.home_card1 .card-container div:hover {
+    background-color: black;
+    color: white;
+}
+
+.home_card1 .card-container div div img:hover {
+    filter: grayscale(100%);
+    transition: transform 1s;
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
