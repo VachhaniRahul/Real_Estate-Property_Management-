@@ -42,7 +42,7 @@
     <h2>Installation</h2>
     <ol>
         <li>Clone the repository:
-            <pre><code>git clone [https://github.com/yourusername/real-estate-management.git](https://github.com/VachhaniRahul/Real_Estate-Property_Management-)</code></pre>
+            <pre><code>git clone https://github.com/VachhaniRahul/Real_Estate-Property_Management-</code></pre>
         </li>
         <li>Navigate to the project directory:
             <pre><code>cd real-estate-management</code></pre>
